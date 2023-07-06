@@ -10,15 +10,16 @@ The designs were created to the following widths:
 ## Colors
 
 - White: hsl(0, 0%, 100%)
-- Light gray: hsl(212, 45%, 89%)
-- Grayish blue: hsl(220, 15%, 55%)
-- Dark blue: hsl(218, 44%, 22%)
+- Light gray: hsl(212, 45%, 89%) for background
+- Grayish blue: hsl(220, 15%, 55%) for subtitle text
+- Dark blue: hsl(218, 44%, 22%) for heading text
 
 ## Typography
 
 ### Body Copy
 
-- Font size (paragraph): 15px
+- Font size (paragraph): ~~15px~~ I used 20px
+- Font size (heading): 28px 
 
 ### Font
 

@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+
+$outfit-font-stack: 'Outfit', sans-serif;
+$image-size: 385px; 
+
+@mixin blue-bold-text(){
+    font-weight:700;
+    color:$dark-blue;
+    font-size: 28px;
+}
+
+@mixin subtitle-text(){
+    font-weight: 400;
+    color: $grayish-blue;
+    font-size: 20px;
+}
+
+@mixin rounded-corner($amount){
+    border-radius: $amount;
+}
+
+@mixin center-element($width:80%){
+   width: $width;
+   margin: auto;
+}
+*{
+    box-sizing: border-box;
+    font-family: $outfit-font-stack;
+}
+html{
+    height:100%;
+    margin: 0px;
+}
+
+body{
+    height: 100%;
+    margin:0px;
+    background-color: $light-gray;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mainContent{
+    flex: 1 0 auto;
+    width: 90%;
+}
+
+img{
+    height: $image-size * .7;
+    width: $image-size * .7;
+    @include rounded-corner(25px);  
+}
+
+.textBlock{
+    margin-top: 10px;
+    background-color: $white;
+    @include rounded-corner(20px);
+    text-align: center;
+    padding: 10px;
+    
+    h1{
+        @include blue-bold-text();
+        padding:10px 10px;
+        text-align: center;
+        
+    }
+    
+    p{
+        @include subtitle-text();
+        padding: 10px 30px;  
+        text-align: center;
+    }
+}
+
+footer{
+    flex-shrink: 0;
+    display: none;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    position: relative;}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media only screen and (min-width: 800px) {
+   .mainContent{
+    margin:auto;
+    width: 100%;
+    box-sizing: border-box ;
+   }
+   img{
+    width: $image-size;
+    height: $image-size;
+   }
+   .textBlock{
+    box-shadow: 10px 10px 20px $grayish-blue;
+    width: $image-size + 40px;
+    margin: auto;
+    margin-top: 80px; 
+    padding: 20px;
+   }
+   footer{
+    display: block;
+   }
+
+
+}
